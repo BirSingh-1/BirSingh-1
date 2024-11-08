@@ -1,4 +1,4 @@
-//  Write a program to implement stack using two queues 
+//  Write a program to implement stack using (ii) TWO Queues 
 #include<iostream>
 #include<queue>
 using namespace std;
@@ -19,9 +19,12 @@ class stacktwoqueues{
 					q1.pop();
 				}
 				q1.pop();
-				queue<int> q=q1;
+				// queue<int> q=q1;
 				q1=q2;
-				q2=q;
+				// q2=q;
+				while(!q2.empty()){
+					q2.pop();
+				}
 			}
 		}
 		int top(){
