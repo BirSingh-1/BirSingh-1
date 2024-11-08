@@ -1,3 +1,4 @@
+//  Write a program to implement stack using two queues 
 #include<iostream>
 #include<queue>
 using namespace std;
