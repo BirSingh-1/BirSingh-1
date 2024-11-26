@@ -44,14 +44,20 @@ queue dequeue(queue Q){
 	return Q;
 }
 void display(queue Q){
-	if(isempty(Q))
-	cout<<"queue is empty";
-	else{
-		int i;
-	for(i=Q.front;i<=Q.rear;i++){
-        cout<<Q.arr[i]<<" ";
-    	}
-	}
+	void display(queue q) {
+    if (isempty(q)) {
+        cout << "Queue is empty" << endl;
+        return;
+    }
+    cout << "Queue contents: ";
+    int i = q.front;
+    while (true) {
+        cout << q.a[i] << " ";
+        if (i == q.rear)
+            break;
+        i = (i + 1) % max;
+    }
+    cout << endl;
 }
 int main(){
 	queue Q;
